@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+# Activate the virtualenv
+source env/bin/activate
+
+# Install and verify dependencies
+pip3 install -r requirements.txt
+python3 -c "import jupyter, matplotlib, numpy, pandas, scipy, sklearn"
+
+# Fire up the notebook
+jupyter notebook
